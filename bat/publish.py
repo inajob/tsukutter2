@@ -14,6 +14,9 @@ rawPath = '../raw_data/';
 dataPath = '../data/'
 outFile = '../current.json'
 outHtml = '../index.html'
+headerHtml = '../parts/header.html'
+footerHtml = '../parts/footer.html'
+
 
 if __name__ == '__main__':
   files = glob.glob(dataPath + '*.txt');
@@ -46,9 +49,20 @@ if __name__ == '__main__':
   fw.close();
   print "== done dump json =="
   fh = open(outHtml, "w");
+
+  fhead = open(headerHtml, "r");
+  headerStr = fhead.read();
+  fhead.close();
+
+  ffoot = open(footerHtml, "r");
+  footerStr = ffoot.read();
+  ffoot.close();
+ 
+  fh.write(headerStr);
   for x in out:
     fh.write('<a target="_blank" href="' + x['url'] + '">' + x['title'] + '</a> by ' + x['user'] + ' ' + x['desc'] +'<br>\n');
 
+  fh.write(footerStr);
   fh.close();
     
   print "== done dump html =="
