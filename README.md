@@ -34,6 +34,7 @@ pull requestがとりこまれた時点でページに反映されます。
 todo
 ==========
 - twitterのbotと連動
+- tsukutter連携？
 - RSSの出力
 - ページのスタイルを綺麗に
 - 外部のUIから入稿できるように
