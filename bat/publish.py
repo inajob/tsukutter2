@@ -67,7 +67,7 @@ if __name__ == '__main__':
  
   fh.write(headerStr);
   for x in out:
-    fh.write('<a target="_blank" href="' + html(x['url']) + '">' + html(x['title']) + '</a> by ' + html(x['user']) + ' ' + html(x['desc']) +'<br>\n');
+    fh.write('- <a target="_blank" href="' + html(x['url']) + '">' + html(x['title']) + '</a> by ' + html(x['user']) + ' ' + html(x['desc']) +'<br>\n');
 
   fh.write(footerStr);
   fh.close();
