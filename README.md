@@ -7,6 +7,8 @@ web service list
 
 pull requestベースでサービスを追加していく運用です。
 
+![図解](img/tsukutter2.png)
+
 ページを見る
 ===========
 http://inajob.github.io/tsukutter2/index.html
