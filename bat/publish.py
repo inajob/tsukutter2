@@ -14,6 +14,7 @@ rawPath = '../raw_data/';
 dataPath = '../data/'
 outFile = '../current.json'
 outHtml = '../index.html'
+outRss = '../index.xml'
 headerHtml = '../parts/header.html'
 footerHtml = '../parts/footer.html'
 
@@ -56,6 +57,26 @@ if __name__ == '__main__':
   fw.close();
   print "== done dump json =="
   fh = open(outHtml, "w");
+
+  fr = open(outRss, "w");
+  fr.write("""<?xml version='1.0' encoding='UTF-8'?>
+<rss version='2.0'>
+<channel>
+<title>tsukutter2</title>
+<link>http://inajob.github.io/tsukutter2/index.html</link>
+<description>tsukutter2</description>
+""");
+  for x in out:
+    fr.write('<item><title>'+ html(x['title']) +'</title><link>'+ html(x['url']) +'</link><description>'+ html(x['desc']) +'</description><pubDate>'+ datetime.datetime.fromtimestamp(float(ptime)).strftime("%a, %d %b %Y %H:%M:%S %z") +'</pubDate></item>');
+  fr.write("""
+</channel>
+</rss>""");
+ 
+  fr.close();
+  print "== done dump rss =="
+  fr = open(outHtml, "w");
+
+
 
   fhead = open(headerHtml, "r");
   headerStr = fhead.read();
