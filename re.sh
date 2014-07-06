@@ -1,3 +1,5 @@
+git pull origin gh-pages
+
 cd bat
 python update.py
 python publish.py
