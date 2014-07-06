@@ -15,8 +15,11 @@ http://inajob.github.io/tsukutter2/index.html
 追加方法
 ==========
 raw_dataにサービスの紹介用のテキストを追加してpull requestをください
+
 例)
+
 animecheck_v1.txt
+
 ```
 animecheck
 @ina_ani
