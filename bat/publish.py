@@ -17,6 +17,13 @@ outHtml = '../index.html'
 headerHtml = '../parts/header.html'
 footerHtml = '../parts/footer.html'
 
+def html(text):
+    text = text.replace('&', '&amp;')
+    text = text.replace('"', '&quot;')
+    text = text.replace("'", '&#39;')
+    text = text.replace(">", '&gt;')
+    text = text.replace("<", '&lt;')
+    return text
 
 if __name__ == '__main__':
   files = glob.glob(dataPath + '*.txt');
@@ -60,7 +67,7 @@ if __name__ == '__main__':
  
   fh.write(headerStr);
   for x in out:
-    fh.write('<a target="_blank" href="' + x['url'] + '">' + x['title'] + '</a> by ' + x['user'] + ' ' + x['desc'] +'<br>\n');
+    fh.write('<a target="_blank" href="' + html(x['url']) + '">' + html(x['title']) + '</a> by ' + html(x['user']) + ' ' + html(x['desc']) +'<br>\n');
 
   fh.write(footerStr);
   fh.close();
