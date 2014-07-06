@@ -1,0 +1,6 @@
+animecheck_v1.txt
+1404640582.19
+animecheck
+@ina_ani
+http://animecheck.herokuapp.com/
+見ているアニメを履修登録!

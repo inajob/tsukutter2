@@ -1,0 +1,4 @@
+animecheck
+@ina_ani
+http://animecheck.herokuapp.com/
+見ているアニメを履修登録!
