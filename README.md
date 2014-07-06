@@ -7,6 +7,10 @@ web service list
 
 pull requestベースでサービスを追加していく運用です。
 
+ページを見る
+===========
+http://inajob.github.io/tsukutter2/index.html
+
 
 追加方法
 ==========
@@ -22,6 +26,7 @@ http://animecheck.herokuapp.com/
 現状 サービス名_v1.txt というファイル名を期待しています
 （v1は書式のバージョンです、ゆくゆく変わるかもなので）
 
+pull requestがとりこまれた時点でページに反映されます。
 
 todo
 ==========
